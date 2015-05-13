@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     public void process(View view){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         imageFile=new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"test.jpg");
-       Uri FirstU=Uri.formFile(imageFile);//Here is my problem I dont know how to get ride of it.
+       Uri FirstU=Uri.fromFile(imageFile);//Here is my problem I dont know how to get ride of it.
         intent.putExtra(MediaStore.EXTRA_OUTPUT,FirstU);
         intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
         startActivityForResult(intent, 0);
